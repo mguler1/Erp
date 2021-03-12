@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46E33A50-18DB-476B-B615-1E201DB44BA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MGsTok.BackOffice</RootNamespace>
+    <AssemblyName>MGsTok.BackOffice</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v17.1, Version=17.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajanda\FrmAjanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajanda\FrmAjanda.Designer.cs">
+      <DependentUpon>FrmAjanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaMenü\FrmAnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenü\FrmAnaMenu.Designer.cs">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaMenü\FrmAnaMenuBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenü\FrmAnaMenuBilgi.Designer.cs">
+      <DependentUpon>FrmAnaMenuBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ayarlar\FrmAyarlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayarlar\FrmAyarlar.Designer.cs">
+      <DependentUpon>FrmAyarlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\FrmCari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\FrmCari.Designer.cs">
+      <DependentUpon>FrmCari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\FrmCariHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\FrmCariHareket.Designer.cs">
+      <DependentUpon>FrmCariHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\FrmCariIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\FrmCariIslem.Designer.cs">
+      <DependentUpon>FrmCariIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cari\FrmCariSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cari\FrmCariSec.Designer.cs">
+      <DependentUpon>FrmCariSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depo\FrmDepo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depo\FrmDepo.Designer.cs">
+      <DependentUpon>FrmDepo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depo\FrmDepoHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depo\FrmDepoHareket.Designer.cs">
+      <DependentUpon>FrmDepoHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depo\FrmDepoIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depo\FrmDepoIslem.Designer.cs">
+      <DependentUpon>FrmDepoIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Depo\FrmDepoSecim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depo\FrmDepoSecim.Designer.cs">
+      <DependentUpon>FrmDepoSecim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Döviz Kurları\FrmDovizKurlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Döviz Kurları\FrmDovizKurlari.Designer.cs">
+      <DependentUpon>FrmDovizKurlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiyat Değiştir\FrmFiyatDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiyat Değiştir\FrmFiyatDegistir.Designer.cs">
+      <DependentUpon>FrmFiyatDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fiyat Değiştir\FrmTopluFiyat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fiyat Değiştir\FrmTopluFiyat.Designer.cs">
+      <DependentUpon>FrmTopluFiyat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fişler\FrmFisIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fişler\FrmFisIslem.Designer.cs">
+      <DependentUpon>FrmFisIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fişler\FrmFisler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fişler\FrmFisler.Designer.cs">
+      <DependentUpon>FrmFisler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fişler\FrmSeriNoBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fişler\FrmSeriNoBilgileri.Designer.cs">
+      <DependentUpon>FrmSeriNoBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fişler\FrmTutarGirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fişler\FrmTutarGirisEkrani.Designer.cs">
+      <DependentUpon>FrmTutarGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KasaHareketleri\FrmKasaHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KasaHareketleri\FrmKasaHareketleri.Designer.cs">
+      <DependentUpon>FrmKasaHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sms\FrmSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sms\FrmSms.Designer.cs">
+      <DependentUpon>FrmSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa\FrmKasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasa\FrmKasa.Designer.cs">
+      <DependentUpon>FrmKasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaHareket.Designer.cs">
+      <DependentUpon>FrmKasaHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaIslem.Designer.cs">
+      <DependentUpon>FrmKasaIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasa\FrmKasaSec.Designer.cs">
+      <DependentUpon>FrmKasaSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\FrmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\FrmPersonel.Designer.cs">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\Personelislemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\Personelislemleri.Designer.cs">
+      <DependentUpon>Personelislemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raporlar\Fatura ve Fiş\rptFatura.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\Fatura ve Fiş\rptFatura.Designer.cs">
+      <DependentUpon>rptFatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\FrmRaporGoruntule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar\FrmRaporGoruntule.Designer.cs">
+      <DependentUpon>FrmRaporGoruntule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Raporlar\rptStokDurumu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Raporlar\rptStokDurumu.Designer.cs">
+      <DependentUpon>rptStokDurumu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok Hareketleri\FrmStokHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok Hareketleri\FrmStokHareketleri.Designer.cs">
+      <DependentUpon>FrmStokHareketleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmStok.Designer.cs">
+      <DependentUpon>FrmStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmStokHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmStokHareket.Designer.cs">
+      <DependentUpon>FrmStokHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmStokSec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmStokSec.Designer.cs">
+      <DependentUpon>FrmStokSec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stok\FrmStokİslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok\FrmStokİslem.Designer.cs">
+      <DependentUpon>FrmStokİslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tanımlar\FrmTanimlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanımlar\FrmTanimlar.Designer.cs">
+      <DependentUpon>FrmTanimlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ödeme Türü\FrmOdemeTuru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ödeme Türü\FrmOdemeTuru.Designer.cs">
+      <DependentUpon>FrmOdemeTuru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ödeme Türü\FrmOdemeTuruIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ödeme Türü\FrmOdemeTuruIslemleri.Designer.cs">
+      <DependentUpon>FrmOdemeTuruIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İndirimler\FrmIndirimIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İndirimler\FrmIndirimIslem.Designer.cs">
+      <DependentUpon>FrmIndirimIslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="İndirimler\FrmIndirimler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İndirimler\FrmIndirimler.Designer.cs">
+      <DependentUpon>FrmIndirimler.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ajanda\FrmAjanda.resx">
+      <DependentUpon>FrmAjanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenü\FrmAnaMenu.resx">
+      <DependentUpon>FrmAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaMenü\FrmAnaMenuBilgi.resx">
+      <DependentUpon>FrmAnaMenuBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ayarlar\FrmAyarlar.resx">
+      <DependentUpon>FrmAyarlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\FrmCari.resx">
+      <DependentUpon>FrmCari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\FrmCariHareket.resx">
+      <DependentUpon>FrmCariHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\FrmCariIslem.resx">
+      <DependentUpon>FrmCariIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cari\FrmCariSec.resx">
+      <DependentUpon>FrmCariSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depo\FrmDepo.resx">
+      <DependentUpon>FrmDepo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depo\FrmDepoHareket.resx">
+      <DependentUpon>FrmDepoHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depo\FrmDepoIslem.resx">
+      <DependentUpon>FrmDepoIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depo\FrmDepoSecim.resx">
+      <DependentUpon>FrmDepoSecim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Döviz Kurları\FrmDovizKurlari.resx">
+      <DependentUpon>FrmDovizKurlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiyat Değiştir\FrmFiyatDegistir.resx">
+      <DependentUpon>FrmFiyatDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fiyat Değiştir\FrmTopluFiyat.resx">
+      <DependentUpon>FrmTopluFiyat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fişler\FrmFisIslem.resx">
+      <DependentUpon>FrmFisIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fişler\FrmFisler.resx">
+      <DependentUpon>FrmFisler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fişler\FrmSeriNoBilgileri.resx">
+      <DependentUpon>FrmSeriNoBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fişler\FrmTutarGirisEkrani.resx">
+      <DependentUpon>FrmTutarGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KasaHareketleri\FrmKasaHareketleri.resx">
+      <DependentUpon>FrmKasaHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sms\FrmSms.resx">
+      <DependentUpon>FrmSms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\FrmKasa.resx">
+      <DependentUpon>FrmKasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\FrmKasaHareket.resx">
+      <DependentUpon>FrmKasaHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\FrmKasaIslem.resx">
+      <DependentUpon>FrmKasaIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\FrmKasaSec.resx">
+      <DependentUpon>FrmKasaSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\FrmPersonel.resx">
+      <DependentUpon>FrmPersonel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\Personelislemleri.resx">
+      <DependentUpon>Personelislemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Raporlar\Fatura ve Fiş\rptFatura.resx">
+      <DependentUpon>rptFatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\FrmRaporGoruntule.resx">
+      <DependentUpon>FrmRaporGoruntule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar\rptStokDurumu.resx">
+      <DependentUpon>rptStokDurumu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok Hareketleri\FrmStokHareketleri.resx">
+      <DependentUpon>FrmStokHareketleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmStok.resx">
+      <DependentUpon>FrmStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmStokHareket.resx">
+      <DependentUpon>FrmStokHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmStokSec.resx">
+      <DependentUpon>FrmStokSec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stok\FrmStokİslem.resx">
+      <DependentUpon>FrmStokİslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanımlar\FrmTanimlar.resx">
+      <DependentUpon>FrmTanimlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ödeme Türü\FrmOdemeTuru.resx">
+      <DependentUpon>FrmOdemeTuru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ödeme Türü\FrmOdemeTuruIslemleri.resx">
+      <DependentUpon>FrmOdemeTuruIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İndirimler\FrmIndirimIslem.resx">
+      <DependentUpon>FrmIndirimIslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İndirimler\FrmIndirimler.resx">
+      <DependentUpon>FrmIndirimler.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Cari.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Depo.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.EFAppointment.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.EFResource.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Fis.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Indirim.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Kasa.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.KasaHareket.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.OdemeTuru.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Personel.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.Stok.datasource" />
+    <None Include="Properties\DataSources\MGsTok.Entities.Tables.StokHareket.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\safe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bilgi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_closed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_closed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StokHareket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KasaHareket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_descending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money2_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hızlı Satış Ekle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Düzenle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table2_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\address_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobilephone3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alım Faturası.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satış Faturası.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Toptan Satış.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alım İade.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Satış İade.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tahsilat Fişi.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tediye işi.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sayım Fazlası.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sayım Eksiği.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stok Devir.fw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48x48 TCMB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server_to_client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\server_to_client1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MGsTok.Entities\MGsTok.Entities.csproj">
+      <Project>{4825692f-6183-4598-8cbc-04e90ac47384}</Project>
+      <Name>MGsTok.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
