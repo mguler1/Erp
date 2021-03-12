@@ -28,8 +28,8 @@ namespace MGsTok.BackOffice.Depo
             txtYetkiliKodu.DataBindings.Add("Text", _entity, "YetkiliKodu");
             txtYetkiliAdi.DataBindings.Add("Text", _entity, "YetkiliAdi");
             txtTelefon.DataBindings.Add("Text", _entity, "Telefon");
-            txtIl.DataBindings.Add("Text", _entity, "DepoIl");
-            txtIlce.DataBindings.Add("Text", _entity, "DepoIlce");
+            cmbIl.DataBindings.Add("Text", _entity, "DepoIl");
+            cmbIlce.DataBindings.Add("Text", _entity, "DepoIlce");
             txtSemt.DataBindings.Add("Text", _entity, "Semt");
             txtAdres.DataBindings.Add("Text", _entity, "Adresi");
             txtAcıklama.DataBindings.Add("Text", _entity, "Aciklama");
@@ -42,7 +42,7 @@ namespace MGsTok.BackOffice.Depo
 
         private void FrmDepoIslem_Load(object sender, EventArgs e)
         {
-
+            cmbIl.Properties.DataSource = (from x in context.Il select new { x.Id, x.Sehir }).ToList();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -50,6 +50,13 @@ namespace MGsTok.BackOffice.Depo
             depodal.AddOrUpdate(context,_entity);
             depodal.save(context);
             this.Close();
+        }
+
+        private void cmbIl_EditValueChanged(object sender, EventArgs e)
+        {
+            int secilen;
+            secilen = int.Parse(cmbIl.EditValue.ToString());
+            cmbIlce.Properties.DataSource = (from y in context.Ilceler select new { y.Id, y.Ilce, y.sehir }).Where(z => z.sehir == secilen).ToList();
         }
     }
 }

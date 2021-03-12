@@ -44,14 +44,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.txtSemt = new DevExpress.XtraEditors.TextEdit();
-            this.txtIlce = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtIl = new DevExpress.XtraEditors.TextEdit();
             this.txtTelefon = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.cmbIl = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbIlce = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepoAdi.Properties)).BeginInit();
@@ -65,9 +65,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -162,15 +162,15 @@
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.cmbIlce);
+            this.groupControl3.Controls.Add(this.cmbIl);
             this.groupControl3.Controls.Add(this.txtAcıklama);
             this.groupControl3.Controls.Add(this.label10);
             this.groupControl3.Controls.Add(this.label9);
             this.groupControl3.Controls.Add(this.txtAdres);
             this.groupControl3.Controls.Add(this.txtSemt);
-            this.groupControl3.Controls.Add(this.txtIlce);
             this.groupControl3.Controls.Add(this.label7);
             this.groupControl3.Controls.Add(this.label8);
-            this.groupControl3.Controls.Add(this.txtIl);
             this.groupControl3.Controls.Add(this.txtTelefon);
             this.groupControl3.Controls.Add(this.label5);
             this.groupControl3.Controls.Add(this.label6);
@@ -221,13 +221,6 @@
             this.txtSemt.Size = new System.Drawing.Size(295, 20);
             this.txtSemt.TabIndex = 7;
             // 
-            // txtIlce
-            // 
-            this.txtIlce.Location = new System.Drawing.Point(102, 77);
-            this.txtIlce.Name = "txtIlce";
-            this.txtIlce.Size = new System.Drawing.Size(295, 20);
-            this.txtIlce.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -245,13 +238,6 @@
             this.label8.Size = new System.Drawing.Size(24, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "İlçe";
-            // 
-            // txtIl
-            // 
-            this.txtIl.Location = new System.Drawing.Point(103, 48);
-            this.txtIl.Name = "txtIl";
-            this.txtIl.Size = new System.Drawing.Size(295, 20);
-            this.txtIl.TabIndex = 3;
             // 
             // txtTelefon
             // 
@@ -281,12 +267,37 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = global::MGsTok.BackOffice.Properties.Resources.floppy_disk;
-            this.simpleButton1.Location = new System.Drawing.Point(349, 461);
+            this.simpleButton1.Location = new System.Drawing.Point(165, 461);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(114, 57);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Kaydet";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // cmbIl
+            // 
+            this.cmbIl.Location = new System.Drawing.Point(103, 55);
+            this.cmbIl.Name = "cmbIl";
+            this.cmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbIl.Properties.DisplayMember = "Sehir";
+            this.cmbIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIl.Properties.ValueMember = "Id";
+            this.cmbIl.Size = new System.Drawing.Size(294, 20);
+            this.cmbIl.TabIndex = 12;
+            this.cmbIl.EditValueChanged += new System.EventHandler(this.cmbIl_EditValueChanged);
+            // 
+            // cmbIlce
+            // 
+            this.cmbIlce.Location = new System.Drawing.Point(104, 81);
+            this.cmbIlce.Name = "cmbIlce";
+            this.cmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbIlce.Properties.DisplayMember = "Ilce";
+            this.cmbIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIlce.Properties.ValueMember = "Id";
+            this.cmbIlce.Size = new System.Drawing.Size(294, 20);
+            this.cmbIlce.TabIndex = 12;
             // 
             // FrmDepoIslem
             // 
@@ -316,9 +327,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIlce.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTelefon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,10 +348,8 @@
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.TextEdit txtSemt;
-        private DevExpress.XtraEditors.TextEdit txtIlce;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.TextEdit txtIl;
         private DevExpress.XtraEditors.TextEdit txtTelefon;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -349,5 +358,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.LookUpEdit cmbIlce;
+        private DevExpress.XtraEditors.LookUpEdit cmbIl;
     }
 }
