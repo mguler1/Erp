@@ -31,8 +31,8 @@ namespace MGsTok.BackOffice.Personel
             txtIseGiris.DataBindings.Add("Text", _entity, "IseGirisTarihi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtIstenCikis.DataBindings.Add("Text", _entity, "IstenCikis", false, DataSourceUpdateMode.OnPropertyChanged);
             txtAdres.DataBindings.Add("Text", _entity, "Adres",false,DataSourceUpdateMode.OnPropertyChanged);
-            txtİl.DataBindings.Add("Text", _entity, "Il",false, DataSourceUpdateMode.OnPropertyChanged);
-            txtİlce.DataBindings.Add("Text", _entity, "Ilce", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbIl.DataBindings.Add("Text", _entity, "Il",false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbIlce.DataBindings.Add("Text", _entity, "Ilce", false, DataSourceUpdateMode.OnPropertyChanged);
             txtFax.DataBindings.Add("Text", _entity, "Fax", false, DataSourceUpdateMode.OnPropertyChanged);
             txtMail.DataBindings.Add("Text", _entity, "EMail", false, DataSourceUpdateMode.OnPropertyChanged);
             txtSemt.DataBindings.Add("Text", _entity, "Semt", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -47,6 +47,8 @@ namespace MGsTok.BackOffice.Personel
         {
             textEdit1.Visible = false;
             simpleButton2.Visible = false;
+
+            cmbIl.Properties.DataSource = (from x in context.Il select new { x.Id, x.Sehir }).ToList();
            
         }
 
@@ -84,6 +86,13 @@ namespace MGsTok.BackOffice.Personel
         private void cmbUnvani_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbIl_EditValueChanged(object sender, EventArgs e)
+        {
+            int secilen;
+            secilen = int.Parse(cmbIl.EditValue.ToString());
+            cmbIlce.Properties.DataSource = (from y in context.Ilceler select new { y.Id, y.Ilce, y.sehir }).Where(z => z.sehir == secilen).ToList();
         }
     }
 }

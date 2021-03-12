@@ -37,15 +37,16 @@
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnKapat = new DevExpress.XtraEditors.SimpleButton();
             this.groupMenu = new DevExpress.XtraEditors.GroupControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtİlce = new DevExpress.XtraEditors.TextEdit();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.txtİl = new DevExpress.XtraEditors.TextEdit();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.txtAdres = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -66,6 +67,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cmbUnvani = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtCep = new DevExpress.XtraEditors.TextEdit();
             this.ımageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
@@ -76,17 +78,14 @@
             this.calcAylıkMaas = new DevExpress.XtraEditors.CalcEdit();
             this.groupKdv = new DevExpress.XtraEditors.GroupControl();
             this.lblBaslık = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbUnvani = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbIl = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbIlce = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDairesi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupMenu)).BeginInit();
             this.groupMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtİlce.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtİl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).BeginInit();
@@ -97,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupGenel)).BeginInit();
             this.groupGenel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUnvani.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCep.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ımageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupFiyatlar)).BeginInit();
@@ -105,8 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcAylıkMaas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupKdv)).BeginInit();
             this.groupKdv.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUnvani.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtVergiNo
@@ -118,7 +118,7 @@
             // 
             // txtSemt
             // 
-            this.txtSemt.Location = new System.Drawing.Point(347, 75);
+            this.txtSemt.Location = new System.Drawing.Point(346, 85);
             this.txtSemt.Name = "txtSemt";
             this.txtSemt.Size = new System.Drawing.Size(177, 20);
             this.txtSemt.TabIndex = 26;
@@ -174,9 +174,34 @@
             this.groupMenu.TabIndex = 14;
             this.groupMenu.Text = "Menü";
             // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(158, 27);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(84, 39);
+            this.simpleButton2.TabIndex = 4;
+            this.simpleButton2.Text = "Kaydet";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(248, 27);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(93, 39);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Ünvan Tanımla";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(17, 34);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.TabIndex = 2;
+            // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(295, 79);
+            this.labelControl25.Location = new System.Drawing.Point(297, 83);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(24, 13);
             this.labelControl25.TabIndex = 25;
@@ -222,13 +247,6 @@
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "Personel Adı";
             // 
-            // txtİlce
-            // 
-            this.txtİlce.Location = new System.Drawing.Point(347, 57);
-            this.txtİlce.Name = "txtİlce";
-            this.txtİlce.Size = new System.Drawing.Size(177, 20);
-            this.txtİlce.TabIndex = 24;
-            // 
             // labelControl24
             // 
             this.labelControl24.Location = new System.Drawing.Point(304, 45);
@@ -237,16 +255,9 @@
             this.labelControl24.TabIndex = 23;
             this.labelControl24.Text = "İlçe";
             // 
-            // txtİl
-            // 
-            this.txtİl.Location = new System.Drawing.Point(347, 40);
-            this.txtİl.Name = "txtİl";
-            this.txtİl.Size = new System.Drawing.Size(177, 20);
-            this.txtİl.TabIndex = 22;
-            // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(304, 60);
+            this.labelControl21.Location = new System.Drawing.Point(304, 67);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(6, 13);
             this.labelControl21.TabIndex = 21;
@@ -417,6 +428,17 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Çalışıyor";
             // 
+            // cmbUnvani
+            // 
+            this.cmbUnvani.Location = new System.Drawing.Point(379, 76);
+            this.cmbUnvani.Name = "cmbUnvani";
+            this.cmbUnvani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbUnvani.Properties.Sorted = true;
+            this.cmbUnvani.Size = new System.Drawing.Size(146, 20);
+            this.cmbUnvani.TabIndex = 4;
+            this.cmbUnvani.EditValueChanged += new System.EventHandler(this.cmbUnvani_EditValueChanged);
+            // 
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(87, 20);
@@ -487,11 +509,11 @@
             // 
             // groupKdv
             // 
+            this.groupKdv.Controls.Add(this.cmbIlce);
+            this.groupKdv.Controls.Add(this.cmbIl);
             this.groupKdv.Controls.Add(this.txtSemt);
             this.groupKdv.Controls.Add(this.labelControl25);
-            this.groupKdv.Controls.Add(this.txtİlce);
             this.groupKdv.Controls.Add(this.labelControl24);
-            this.groupKdv.Controls.Add(this.txtİl);
             this.groupKdv.Controls.Add(this.labelControl21);
             this.groupKdv.Controls.Add(this.txtAdres);
             this.groupKdv.Controls.Add(this.labelControl15);
@@ -503,7 +525,7 @@
             this.groupKdv.Controls.Add(this.labelControl20);
             this.groupKdv.Location = new System.Drawing.Point(0, 245);
             this.groupKdv.Name = "groupKdv";
-            this.groupKdv.Size = new System.Drawing.Size(528, 105);
+            this.groupKdv.Size = new System.Drawing.Size(528, 115);
             this.groupKdv.TabIndex = 17;
             this.groupKdv.Text = "İletişim";
             // 
@@ -527,40 +549,30 @@
             this.lblBaslık.TabIndex = 13;
             this.lblBaslık.Text = "             PERSONEL KARTI İŞLEMLERİ";
             // 
-            // textEdit1
+            // cmbIl
             // 
-            this.textEdit1.Location = new System.Drawing.Point(17, 34);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
-            this.textEdit1.TabIndex = 2;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(248, 27);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(93, 39);
-            this.simpleButton1.TabIndex = 3;
-            this.simpleButton1.Text = "Ünvan Tanımla";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(158, 27);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(84, 39);
-            this.simpleButton2.TabIndex = 4;
-            this.simpleButton2.Text = "Kaydet";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // cmbUnvani
-            // 
-            this.cmbUnvani.Location = new System.Drawing.Point(379, 76);
-            this.cmbUnvani.Name = "cmbUnvani";
-            this.cmbUnvani.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbIl.Location = new System.Drawing.Point(347, 45);
+            this.cmbIl.Name = "cmbIl";
+            this.cmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbUnvani.Size = new System.Drawing.Size(146, 20);
-            this.cmbUnvani.TabIndex = 4;
-            this.cmbUnvani.EditValueChanged += new System.EventHandler(this.cmbUnvani_EditValueChanged);
+            this.cmbIl.Properties.DisplayMember = "Sehir";
+            this.cmbIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIl.Properties.ValueMember = "Id";
+            this.cmbIl.Size = new System.Drawing.Size(176, 20);
+            this.cmbIl.TabIndex = 27;
+            this.cmbIl.EditValueChanged += new System.EventHandler(this.cmbIl_EditValueChanged);
+            // 
+            // cmbIlce
+            // 
+            this.cmbIlce.Location = new System.Drawing.Point(347, 64);
+            this.cmbIlce.Name = "cmbIlce";
+            this.cmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbIlce.Properties.DisplayMember = "Ilce";
+            this.cmbIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIlce.Properties.ValueMember = "Id";
+            this.cmbIlce.Size = new System.Drawing.Size(176, 20);
+            this.cmbIlce.TabIndex = 27;
             // 
             // Personelislemleri
             // 
@@ -580,8 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtVergiDairesi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupMenu)).EndInit();
             this.groupMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtİlce.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtİl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax.Properties)).EndInit();
@@ -593,6 +604,7 @@
             this.groupGenel.ResumeLayout(false);
             this.groupGenel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcıklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbUnvani.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCep.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ımageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupFiyatlar)).EndInit();
@@ -603,8 +615,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupKdv)).EndInit();
             this.groupKdv.ResumeLayout(false);
             this.groupKdv.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbUnvani.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -623,9 +635,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtİlce;
         private DevExpress.XtraEditors.LabelControl labelControl24;
-        private DevExpress.XtraEditors.TextEdit txtİl;
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.MemoEdit txtAdres;
         private DevExpress.XtraEditors.LabelControl labelControl15;
@@ -657,8 +667,10 @@
         private System.Windows.Forms.DateTimePicker txtIstenCikis;
         private System.Windows.Forms.DateTimePicker txtIseGiris;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         public DevExpress.XtraEditors.ComboBoxEdit cmbUnvani;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.LookUpEdit cmbIlce;
+        private DevExpress.XtraEditors.LookUpEdit cmbIl;
     }
 }
