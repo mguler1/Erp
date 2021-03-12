@@ -16,6 +16,7 @@ namespace MGsTok.BackOffice.Cari
 {
     public partial class FrmCariIslem : DevExpress.XtraEditors.XtraForm
     {
+        int secilen;
         private Entities.Tables.Cari _entity;//ben oluştrdum
         private CariDal Caridal = new CariDal();
         private MGsTOKContex context = new MGsTOKContex();
@@ -27,15 +28,15 @@ namespace MGsTok.BackOffice.Cari
             txtCariKodu.DataBindings.Add("Text", _entity, "CariKodu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtCariAdi.DataBindings.Add("Text", _entity, "CariAdi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtFaturaUnvani.DataBindings.Add("Text", _entity, "FaturaUnvani", false, DataSourceUpdateMode.OnPropertyChanged);
-            txtVergiDairesi.DataBindings.Add("Text", _entity, "VergiDairesi", false, DataSourceUpdateMode.OnPropertyChanged);
+           txtVergiDairesi.DataBindings.Add("Text", _entity, "VergiDairesi", false, DataSourceUpdateMode.OnPropertyChanged);
             cmbCariTuru.DataBindings.Add("Text", _entity, "CariTuru", false, DataSourceUpdateMode.OnPropertyChanged);
             txtVergiNo.DataBindings.Add("Text", _entity, "VergiNo", false, DataSourceUpdateMode.OnPropertyChanged);
             txtYetkiliKisi.DataBindings.Add("Text", _entity, "YetkiliKisi", false, DataSourceUpdateMode.OnPropertyChanged);
             txtCep.DataBindings.Add("Text", _entity, "CepTelefonu", false, DataSourceUpdateMode.OnPropertyChanged);
             txtSabitTel.DataBindings.Add("Text", _entity, "Telefon", false, DataSourceUpdateMode.OnPropertyChanged);
             txtAdres.DataBindings.Add("Text", _entity, "Adres",false, DataSourceUpdateMode.OnPropertyChanged);
-            txtİl.DataBindings.Add("Text", _entity, "Il", false, DataSourceUpdateMode.OnPropertyChanged);
-            txtİlce.DataBindings.Add("Text", _entity, "Ilce", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbIl.DataBindings.Add("Text", _entity, "Il", false, DataSourceUpdateMode.OnPropertyChanged);
+            cmbIlce.DataBindings.Add("Text", _entity, "Ilce", false, DataSourceUpdateMode.OnPropertyChanged);
             txtFax.DataBindings.Add("Text", _entity, "Fax", false, DataSourceUpdateMode.OnPropertyChanged);
             txtMail.DataBindings.Add("Text", _entity, "EMail", false, DataSourceUpdateMode.OnPropertyChanged);
             txtSemt.DataBindings.Add("Text", _entity, "Semt", false, DataSourceUpdateMode.OnPropertyChanged);
@@ -82,7 +83,19 @@ namespace MGsTok.BackOffice.Cari
 
         private void FrmCariIslem_Load(object sender, EventArgs e)
         {
+            cmbIl.Properties.DataSource = (from x in context.Il select new { x.Id, x.Sehir }).ToList();
+          
+        }
 
+        private void cmbIlce_EditValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbIl_EditValueChanged(object sender, EventArgs e)
+        {
+            secilen = int.Parse(cmbIl.EditValue.ToString());
+            cmbIlce.Properties.DataSource = (from y in context.Ilceler select new { y.Id, y.Ilce, y.sehir }).Where(z => z.sehir == secilen).ToList();
         }
     }
 }

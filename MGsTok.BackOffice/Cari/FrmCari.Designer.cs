@@ -429,6 +429,8 @@
             this.colIl.FieldName = "Il";
             this.colIl.Name = "colIl";
             this.colIl.OptionsColumn.AllowEdit = false;
+            this.colIl.Visible = true;
+            this.colIl.VisibleIndex = 15;
             // 
             // colIlce
             // 
