@@ -59,6 +59,8 @@
             this.calcİskontoOrani = new DevExpress.XtraEditors.CalcEdit();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.groupKdv = new DevExpress.XtraEditors.GroupControl();
+            this.cmbIlce = new DevExpress.XtraEditors.LookUpEdit();
+            this.cmbIl = new DevExpress.XtraEditors.LookUpEdit();
             this.txtSemt = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
@@ -103,9 +105,6 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.lblBaslık = new DevExpress.XtraEditors.LabelControl();
-            this.cmbIl = new DevExpress.XtraEditors.LookUpEdit();
-            this.cmbIlce = new DevExpress.XtraEditors.LookUpEdit();
             this.stokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ımageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnOzelKod4.Properties)).BeginInit();
@@ -118,6 +117,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.calcİskontoOrani.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupKdv)).BeginInit();
             this.groupKdv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).BeginInit();
@@ -143,8 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCariKodu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleDurum.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,7 +236,7 @@
             this.groupFiyatlar.Controls.Add(this.labelControl22);
             this.groupFiyatlar.Controls.Add(this.calcAlısOzelFiyatı);
             this.groupFiyatlar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupFiyatlar.Location = new System.Drawing.Point(0, 458);
+            this.groupFiyatlar.Location = new System.Drawing.Point(0, 416);
             this.groupFiyatlar.Name = "groupFiyatlar";
             this.groupFiyatlar.Size = new System.Drawing.Size(528, 66);
             this.groupFiyatlar.TabIndex = 12;
@@ -321,11 +320,39 @@
             this.groupKdv.Controls.Add(this.txtCep);
             this.groupKdv.Controls.Add(this.labelControl20);
             this.groupKdv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupKdv.Location = new System.Drawing.Point(0, 335);
+            this.groupKdv.Location = new System.Drawing.Point(0, 293);
             this.groupKdv.Name = "groupKdv";
             this.groupKdv.Size = new System.Drawing.Size(528, 123);
             this.groupKdv.TabIndex = 11;
             this.groupKdv.Text = "İletişim";
+            // 
+            // cmbIlce
+            // 
+            this.cmbIlce.Location = new System.Drawing.Point(347, 71);
+            this.cmbIlce.Name = "cmbIlce";
+            this.cmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbIlce.Properties.DisplayMember = "Ilce";
+            this.cmbIlce.Properties.NullText = "İlçe Seçiniz";
+            this.cmbIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIlce.Properties.ValueMember = "Id";
+            this.cmbIlce.Size = new System.Drawing.Size(178, 20);
+            this.cmbIlce.TabIndex = 28;
+            this.cmbIlce.EditValueChanged += new System.EventHandler(this.cmbIlce_EditValueChanged);
+            // 
+            // cmbIl
+            // 
+            this.cmbIl.Location = new System.Drawing.Point(347, 52);
+            this.cmbIl.Name = "cmbIl";
+            this.cmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbIl.Properties.DisplayMember = "Sehir";
+            this.cmbIl.Properties.NullText = "İl Seçiniz";
+            this.cmbIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.cmbIl.Properties.ValueMember = "Id";
+            this.cmbIl.Size = new System.Drawing.Size(176, 20);
+            this.cmbIl.TabIndex = 27;
+            this.cmbIl.EditValueChanged += new System.EventHandler(this.cmbIl_EditValueChanged);
             // 
             // txtSemt
             // 
@@ -440,7 +467,7 @@
             this.groupGruplar.Controls.Add(this.labelControl13);
             this.groupGruplar.Controls.Add(this.labelControl12);
             this.groupGruplar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupGruplar.Location = new System.Drawing.Point(0, 247);
+            this.groupGruplar.Location = new System.Drawing.Point(0, 205);
             this.groupGruplar.Name = "groupGruplar";
             this.groupGruplar.Size = new System.Drawing.Size(528, 88);
             this.groupGruplar.TabIndex = 10;
@@ -648,7 +675,7 @@
             this.groupGenel.Controls.Add(this.labelControl2);
             this.groupGenel.Controls.Add(this.labelControl1);
             this.groupGenel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupGenel.Location = new System.Drawing.Point(0, 42);
+            this.groupGenel.Location = new System.Drawing.Point(0, 0);
             this.groupGenel.Name = "groupGenel";
             this.groupGenel.Size = new System.Drawing.Size(528, 205);
             this.groupGenel.TabIndex = 9;
@@ -739,54 +766,6 @@
             this.labelControl4.TabIndex = 1;
             this.labelControl4.Text = "Cari Adı";
             // 
-            // lblBaslık
-            // 
-            this.lblBaslık.Appearance.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslık.Appearance.Image = global::MGsTok.BackOffice.Properties.Resources.user;
-            this.lblBaslık.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.Appearance.Options.UseFont = true;
-            this.lblBaslık.Appearance.Options.UseImage = true;
-            this.lblBaslık.Appearance.Options.UseImageAlign = true;
-            this.lblBaslık.AppearancePressed.Image = ((System.Drawing.Image)(resources.GetObject("lblBaslık.AppearancePressed.Image")));
-            this.lblBaslık.AppearancePressed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.AppearancePressed.Options.UseImage = true;
-            this.lblBaslık.AppearancePressed.Options.UseImageAlign = true;
-            this.lblBaslık.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslık.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaslık.Location = new System.Drawing.Point(0, 0);
-            this.lblBaslık.Name = "lblBaslık";
-            this.lblBaslık.Size = new System.Drawing.Size(528, 42);
-            this.lblBaslık.TabIndex = 7;
-            this.lblBaslık.Text = "             CARİ KARTI İŞLEMLERİ";
-            // 
-            // cmbIl
-            // 
-            this.cmbIl.Location = new System.Drawing.Point(347, 52);
-            this.cmbIl.Name = "cmbIl";
-            this.cmbIl.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbIl.Properties.DisplayMember = "Sehir";
-            this.cmbIl.Properties.NullText = "İl Seçiniz";
-            this.cmbIl.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbIl.Properties.ValueMember = "Id";
-            this.cmbIl.Size = new System.Drawing.Size(176, 20);
-            this.cmbIl.TabIndex = 27;
-            this.cmbIl.EditValueChanged += new System.EventHandler(this.cmbIl_EditValueChanged);
-            // 
-            // cmbIlce
-            // 
-            this.cmbIlce.Location = new System.Drawing.Point(347, 71);
-            this.cmbIlce.Name = "cmbIlce";
-            this.cmbIlce.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbIlce.Properties.DisplayMember = "Ilce";
-            this.cmbIlce.Properties.NullText = "İlçe Seçiniz";
-            this.cmbIlce.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.cmbIlce.Properties.ValueMember = "Id";
-            this.cmbIlce.Size = new System.Drawing.Size(178, 20);
-            this.cmbIlce.TabIndex = 28;
-            this.cmbIlce.EditValueChanged += new System.EventHandler(this.cmbIlce_EditValueChanged);
-            // 
             // stokBindingSource
             // 
             this.stokBindingSource.DataSource = typeof(MGsTok.Entities.Tables.Stok);
@@ -801,7 +780,6 @@
             this.Controls.Add(this.groupGruplar);
             this.Controls.Add(this.groupMenu);
             this.Controls.Add(this.groupGenel);
-            this.Controls.Add(this.lblBaslık);
             this.Name = "FrmCariIslem";
             this.Text = "Cari İşlemleri";
             this.Load += new System.EventHandler(this.FrmCariIslem_Load);
@@ -818,6 +796,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupKdv)).EndInit();
             this.groupKdv.ResumeLayout(false);
             this.groupKdv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSemt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAdres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMail.Properties)).EndInit();
@@ -845,8 +825,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCariAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCariKodu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toggleDurum.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIl.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbIlce.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -903,7 +881,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.LabelControl lblBaslık;
         private DevExpress.XtraEditors.TextEdit txtFax;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.TextEdit txtSabitTel;

@@ -39,7 +39,6 @@
             this.btnCariSil = new DevExpress.XtraEditors.SimpleButton();
             this.btnCariDuzenle = new DevExpress.XtraEditors.SimpleButton();
             this.btnCariEkle = new DevExpress.XtraEditors.SimpleButton();
-            this.lblBaslık = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -199,26 +198,6 @@
             this.btnCariEkle.TabIndex = 0;
             this.btnCariEkle.Text = "EKLE";
             this.btnCariEkle.Click += new System.EventHandler(this.btnCariEkle_Click);
-            // 
-            // lblBaslık
-            // 
-            this.lblBaslık.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslık.Appearance.Image = global::MGsTok.BackOffice.Properties.Resources.user;
-            this.lblBaslık.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.Appearance.Options.UseFont = true;
-            this.lblBaslık.Appearance.Options.UseImage = true;
-            this.lblBaslık.Appearance.Options.UseImageAlign = true;
-            this.lblBaslık.AppearancePressed.Image = ((System.Drawing.Image)(resources.GetObject("lblBaslık.AppearancePressed.Image")));
-            this.lblBaslık.AppearancePressed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.AppearancePressed.Options.UseImage = true;
-            this.lblBaslık.AppearancePressed.Options.UseImageAlign = true;
-            this.lblBaslık.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslık.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaslık.Location = new System.Drawing.Point(0, 0);
-            this.lblBaslık.Name = "lblBaslık";
-            this.lblBaslık.Size = new System.Drawing.Size(1358, 38);
-            this.lblBaslık.TabIndex = 3;
-            this.lblBaslık.Text = "             CARİ KARTLARI";
             // 
             // splitContainerControl1
             // 
@@ -564,10 +543,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1358, 683);
-            this.Controls.Add(this.lblBaslık);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "FrmCari";
-            this.Text = "FrmCari";
+            this.Text = "Cariler";
             this.Load += new System.EventHandler(this.FrmCari_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -588,7 +566,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCariSil;
         private DevExpress.XtraEditors.SimpleButton btnCariDuzenle;
         private DevExpress.XtraEditors.SimpleButton btnCariEkle;
-        private DevExpress.XtraEditors.LabelControl lblBaslık;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;

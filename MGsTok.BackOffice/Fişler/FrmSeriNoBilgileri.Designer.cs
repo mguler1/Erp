@@ -125,7 +125,8 @@
             this.Controls.Add(this.listBoxControl1);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmSeriNoBilgileri";
-            this.Text = "FrmSeriNoBilgileri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Seri No Bilgileri";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSeriNoBilgileri_FormClosing);
             this.Load += new System.EventHandler(this.FrmSeriNoBilgileri_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listBoxControl1)).EndInit();

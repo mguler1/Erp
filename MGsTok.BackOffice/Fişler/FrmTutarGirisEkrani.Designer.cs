@@ -96,7 +96,7 @@
             // 
             this.txtOdemeTuru.Location = new System.Drawing.Point(74, 17);
             this.txtOdemeTuru.Name = "txtOdemeTuru";
-            this.txtOdemeTuru.Size = new System.Drawing.Size(212, 20);
+            this.txtOdemeTuru.Size = new System.Drawing.Size(230, 20);
             this.txtOdemeTuru.TabIndex = 1;
             // 
             // txtKasaKodu
@@ -117,7 +117,7 @@
             // 
             this.txtAciklama.Location = new System.Drawing.Point(74, 120);
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(212, 96);
+            this.txtAciklama.Size = new System.Drawing.Size(230, 96);
             this.txtAciklama.TabIndex = 4;
             // 
             // calcTutar
@@ -130,13 +130,13 @@
             this.calcTutar.Properties.Appearance.Options.UseForeColor = true;
             this.calcTutar.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcTutar.Size = new System.Drawing.Size(212, 20);
+            this.calcTutar.Size = new System.Drawing.Size(230, 20);
             this.calcTutar.TabIndex = 16;
             this.calcTutar.EditValueChanged += new System.EventHandler(this.txtKdvToplam_EditValueChanged);
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(173, 222);
+            this.btnKaydet.Location = new System.Drawing.Point(123, 222);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(70, 45);
             this.btnKaydet.TabIndex = 17;
@@ -148,7 +148,7 @@
             this.simpleButton1.ImageOptions.Image = global::MGsTok.BackOffice.Properties.Resources.KasaHareket;
             this.simpleButton1.Location = new System.Drawing.Point(249, 44);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(37, 40);
+            this.simpleButton1.Size = new System.Drawing.Size(55, 40);
             this.simpleButton1.TabIndex = 18;
             this.simpleButton1.Text = "simpleButton1";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 279);
+            this.ClientSize = new System.Drawing.Size(329, 279);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.calcTutar);

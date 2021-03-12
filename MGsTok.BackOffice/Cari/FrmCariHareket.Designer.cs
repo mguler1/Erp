@@ -46,7 +46,6 @@
             this.btnStokAra = new DevExpress.XtraEditors.SimpleButton();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnStokGuncelle = new DevExpress.XtraEditors.SimpleButton();
-            this.lblBaslık = new DevExpress.XtraEditors.LabelControl();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -234,26 +233,6 @@
             this.btnStokGuncelle.TabIndex = 0;
             this.btnStokGuncelle.Text = " GÜNCELLE";
             this.btnStokGuncelle.Click += new System.EventHandler(this.btnStokGuncelle_Click);
-            // 
-            // lblBaslık
-            // 
-            this.lblBaslık.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBaslık.Appearance.Image = global::MGsTok.BackOffice.Properties.Resources.user;
-            this.lblBaslık.Appearance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.Appearance.Options.UseFont = true;
-            this.lblBaslık.Appearance.Options.UseImage = true;
-            this.lblBaslık.Appearance.Options.UseImageAlign = true;
-            this.lblBaslık.AppearancePressed.Image = ((System.Drawing.Image)(resources.GetObject("lblBaslık.AppearancePressed.Image")));
-            this.lblBaslık.AppearancePressed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblBaslık.AppearancePressed.Options.UseImage = true;
-            this.lblBaslık.AppearancePressed.Options.UseImageAlign = true;
-            this.lblBaslık.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblBaslık.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblBaslık.Location = new System.Drawing.Point(0, 0);
-            this.lblBaslık.Name = "lblBaslık";
-            this.lblBaslık.Size = new System.Drawing.Size(1343, 36);
-            this.lblBaslık.TabIndex = 4;
-            this.lblBaslık.Text = "             CARİ HAREKTLERİ";
             // 
             // splitContainerControl1
             // 
@@ -460,10 +439,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 765);
             this.Controls.Add(this.groupControl1);
-            this.Controls.Add(this.lblBaslık);
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "FrmCariHareket";
-            this.Text = "FrmCariHareket";
+            this.Text = "Cari Hareketleri";
             this.Load += new System.EventHandler(this.FrmCariHareket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
@@ -498,7 +476,6 @@
         private DevExpress.XtraEditors.SimpleButton btnStokAra;
         private System.Windows.Forms.ImageList ımageList1;
         private DevExpress.XtraEditors.SimpleButton btnStokGuncelle;
-        private DevExpress.XtraEditors.LabelControl lblBaslık;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
