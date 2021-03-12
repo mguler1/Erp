@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using MGsTok.Entities.DataAccess;
 using MGsTok.Entities.Contex;
 using MGsTok.Entities.interfaces;
+using MGsTok.Entities.Enums;
 
 namespace MGsTok.BackOffice.Cari
 {
@@ -84,6 +85,7 @@ namespace MGsTok.BackOffice.Cari
         private void FrmCariIslem_Load(object sender, EventArgs e)
         {
             cmbIl.Properties.DataSource = (from x in context.Il select new { x.Id, x.Sehir }).ToList();
+            cmbCariTuru.Properties.Items.AddRange(Enum.GetNames(typeof(EnumCariTuru)));
           
         }
 

@@ -74,6 +74,7 @@
     <Compile Include="DataAccess\StokDal.cs" />
     <Compile Include="DataAccess\StokHareketDal.cs" />
     <Compile Include="DataAccess\TanimDal.cs" />
+    <Compile Include="Enums\EnumCariTuru.cs" />
     <Compile Include="interfaces\IEntitiy.cs" />
     <Compile Include="interfaces\IEntitiyRepostory.cs" />
     <Compile Include="Mapping\CariMap.cs" />
@@ -144,9 +145,7 @@
       <DependentUpon>202103121151354_IlIlceAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
