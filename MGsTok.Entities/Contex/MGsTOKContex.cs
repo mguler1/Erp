@@ -24,7 +24,8 @@ namespace MGsTok.Entities.Contex
         public DbSet<Indirim> Indirimler { get; set; }
         public DbSet<EFAppointment> EFAppointments { get; set; }
         public DbSet<EFResource> EFResources { get; set; }
-
+        public DbSet<Il> Il { get; set; }
+        public DbSet<Ilceler> Ilceler { get; set; }
 
         //map ettiğimiz tabloları database de oluşturma
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
